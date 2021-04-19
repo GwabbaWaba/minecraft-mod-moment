@@ -20,11 +20,7 @@ jobs:
         os: [ubuntu-20.04, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: checkout repository
-        uses: actions/checkout@v2
-      - name: validate gradle wrapper
-        uses: gradle/wrapper-validation-action@v1
-      - name: setup jdk ${{ matrix.java }}
+      - name: checkout r
         uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java }}
